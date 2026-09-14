@@ -11,7 +11,7 @@ body {
     font-family: SuperTrend;
 }
 
-header,
-footer {
-    background-color: red;
+main {
+    max-width: 1000px;
+    margin: auto;
 }
