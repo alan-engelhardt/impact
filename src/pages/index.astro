@@ -7,7 +7,11 @@ import Card from "../components/Card.astro";
 	<h1>Impact Festival</h1>
 	<h2>Trifolium</h2>
 	<section>
-		<Card title="Card 1" bgimage="card6.webp" />
+		<Card
+			title="Card 1"
+			description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid culpa dignissimos assumenda alias dolor dicta, placeat."
+			bgimage="card6.webp"
+		/>
 		<Card title="Card 2" bgimage="card2.webp" />
 		<Card title="Noget andet" bgimage="card3.webp" />
 		<Card title="" bgimage="card4.webp" />
@@ -19,7 +23,7 @@ import Card from "../components/Card.astro";
 <style>
 	section {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		gap: 1rem;
 	}
 </style>
