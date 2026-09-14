@@ -1,13 +1,16 @@
 ---
-const { title, description, bgimage, udsolgt } = Astro.props;
+const { title, description, bgimage, label, udsolgt } = Astro.props;
 ---
 
-<article style=`background-image: url(images/${bgimage})`>
+<article
+    class={udsolgt && "dim"}
+    style=`background-image: url(images/${bgimage})`
+>
     <h2>{title}</h2>
     <p>
         {description}
     </p>
-    {udsolgt && <p class="label">Udsolgt</p>}
+    {label && <p class="label">Få billetter</p>}
 </article>
 
 <style>
@@ -29,5 +32,9 @@ const { title, description, bgimage, udsolgt } = Astro.props;
         padding: 1rem;
         background-color: orange;
         rotate: 5deg;
+    }
+    .dim {
+        filter: grayscale(1);
+        color: grey;
     }
 </style>
