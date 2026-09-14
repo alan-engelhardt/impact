@@ -1,5 +1,5 @@
 ---
-const { title, description, bgimage } = Astro.props;
+const { title, description, bgimage, udsolgt } = Astro.props;
 ---
 
 <article style=`background-image: url(images/${bgimage})`>
@@ -7,10 +7,12 @@ const { title, description, bgimage } = Astro.props;
     <p>
         {description}
     </p>
+    {udsolgt && <p class="label">Udsolgt</p>}
 </article>
 
 <style>
     article {
+        position: relative;
         background-size: cover;
         padding: 2rem;
         color: white;
@@ -19,5 +21,13 @@ const { title, description, bgimage } = Astro.props;
     img {
         max-width: 100%;
         aspect-ratio: inherit;
+    }
+    .label {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        padding: 1rem;
+        background-color: orange;
+        rotate: 5deg;
     }
 </style>
