@@ -1,0 +1,25 @@
+---
+const { title, bgimage } = Astro.props;
+---
+
+<article style=`background-image: url(images/${bgimage})`>
+    <h2>{title}</h2>
+    <p>
+        Beskrivelse Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+        sed quod minima, cupiditate repellendus deserunt architecto, hic earum
+        consectetur minus id dolore quidem dignissimos excepturi impedit dicta
+        rem harum. Perspiciatis.
+    </p>
+</article>
+
+<style>
+    article {
+        background-size: cover;
+        padding: 2rem;
+        color: white;
+    }
+    img {
+        max-width: 100%;
+        aspect-ratio: inherit;
+    }
+</style>
