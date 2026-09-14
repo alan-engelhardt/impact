@@ -1,17 +1,19 @@
 ---
-const { title, description, bgimage, label, udsolgt } = Astro.props;
+const { title, description, bgimage, label, udsolgt, url } = Astro.props;
 ---
 
-<article
-    class={udsolgt && "dim"}
-    style=`background-image: url(images/${bgimage})`
->
-    <h2>{title}</h2>
-    <p>
-        {description}
-    </p>
-    {label && <p class="label">Få billetter</p>}
-</article>
+<a href={url}>
+    <article
+        class={udsolgt && "dim"}
+        style=`background-image: url(images/${bgimage})`
+    >
+        <h2>{title}</h2>
+        <p>
+            {description}
+        </p>
+        {label && <p class="label">Få billetter</p>}
+    </article>
+</a>
 
 <style>
     article {
@@ -20,6 +22,9 @@ const { title, description, bgimage, label, udsolgt } = Astro.props;
         padding: 2rem;
         color: white;
         aspect-ratio: 6.2/9;
+    }
+    a {
+        text-decoration: none;
     }
     img {
         max-width: 100%;
@@ -36,7 +41,7 @@ const { title, description, bgimage, label, udsolgt } = Astro.props;
     .dim {
         filter: grayscale(1);
         color: grey;
-        opacity: 0.5;
+        opacity: 0.2;
     }
     article:hover {
         filter: hue-rotate(80deg);
