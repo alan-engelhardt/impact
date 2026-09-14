@@ -6,12 +6,27 @@ import Card from "../components/Card.astro";
 <Layout>
 	<h1>Impact Festival</h1>
 	<h2>Trifolium</h2>
-	<Card
-		title="Detter er card 1"
-		description="Her er en beskrivelse af mit event"
-	/>
-	<Card title="Ny titel" />
-	<Card />
-	<Card />
-	<Card />
+	<section>
+		<Card
+			title="Detter er card 1"
+			description="Her er en beskrivelse af mit event"
+			bgimage="card1.webp"
+		/>
+		<Card
+			title="Ny titel"
+			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae corporis, tempore id laborum consequatur praesentium. Sint consequatur voluptas quos a, odio vero, itaque ut inventore sequi dolorem, unde esse dolore."
+			bgimage="card3.webp"
+		/>
+		<Card bgimage="card3.webp" />
+		<Card />
+		<Card />
+	</section>
 </Layout>
+
+<style>
+	section {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+	}
+</style>
