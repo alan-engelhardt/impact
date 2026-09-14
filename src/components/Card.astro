@@ -36,5 +36,9 @@ const { title, description, bgimage, label, udsolgt } = Astro.props;
     .dim {
         filter: grayscale(1);
         color: grey;
+        opacity: 0.5;
+    }
+    article:hover {
+        filter: hue-rotate(80deg);
     }
 </style>
