@@ -1,8 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
 	<h1>Impact Festival</h1>
 	<h2>Trifolium</h2>
+	<section>
+		<Card
+			title="Card 1"
+			description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid culpa dignissimos assumenda alias dolor dicta, placeat."
+			bgimage="card1.webp"
+		/>
+		<Card title="Card 2" bgimage="card2.webp" />
+		<Card title="Noget andet" bgimage="card3.webp" udsolgt />
+		<Card title="Lorem" bgimage="card5.webp" label />
+		<Card title="Ipsun" bgimage="card6.webp" udsolgt />
+		<Card title="Delor" bgimage="card1.webp" label url="/event6" />
+	</section>
 </Layout>
+
+<style>
+	section {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1rem;
+	}
+</style>
